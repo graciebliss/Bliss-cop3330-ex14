@@ -22,14 +22,16 @@ public class apps {
 
         double total=subtotal;
 
+        String output="";
+
         if(state.equals("WI")){
             double actualTax=subtotal*tax;
             actualTax=Math.round(actualTax*100.0)/100.0;
             total+=(subtotal*tax);
-            System.out.println("The subtotal is $"+String.format("%.2f",subtotal)+".\nThe tax is $"+String.format("%.2f",actualTax)+".");
+            output="The subtotal is $"+String.format("%.2f",subtotal)+".\nThe tax is $"+String.format("%.2f",actualTax)+".";
         }
 
         total=Math.round(total*100.0)/100.0;
-        System.out.print("The total is $"+String.format("%.2f",total)+".");
+        System.out.print(output+"\nThe total is $"+String.format("%.2f",total)+".");
     }
 }
